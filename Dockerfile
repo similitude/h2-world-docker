@@ -5,6 +5,7 @@ MAINTAINER Oliver Lade <oliver@similitude.org>
 
 ENV H2_HOME /opt/h2
 ENV H2_DATA /opt/h2-data
+ENV H2_VERSION 1.4.182
 
 # Download and set up H2.
 RUN curl http://www.h2database.com/h2-2014-10-17.zip -o h2.zip && \
@@ -17,4 +18,4 @@ RUN curl http://www.h2database.com/h2-2014-10-17.zip -o h2.zip && \
 ADD world.sql world.sql
 
 # Load the data into H2.
-RUN java -cp $H2_HOME/bin/h2*.jar org.h2.tools.RunScript -url jdbc:h2:$H2_DATA -script world.sql
+RUN java -cp $H2_HOME/bin/h2-$H2_VERSION.jar org.h2.tools.RunScript -url jdbc:h2:$H2_DATA -script world.sql

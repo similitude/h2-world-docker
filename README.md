@@ -9,6 +9,7 @@ This data was exported from a PostgreSQL database with `INSERT` statements and
 cleaned up manually for compatibility with H2.
 
 > Welcome to H2, the Java SQL database. The main features of H2 are:
+>
 > * Very fast, open source, JDBC API
 > * Embedded and server modes; in-memory databases
 > * Browser based Console application
