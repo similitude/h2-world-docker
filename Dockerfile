@@ -18,4 +18,4 @@ RUN curl http://www.h2database.com/h2-2014-10-17.zip -o h2.zip && \
 ADD world.sql world.sql
 
 # Load the data into H2.
-RUN java -cp $H2_HOME/bin/h2-$H2_VERSION.jar org.h2.tools.RunScript -url jdbc:h2:$H2_DATA -script world.sql
+RUN java -cp $H2_HOME/bin/h2-$H2_VERSION.jar org.h2.tools.RunScript -url jdbc:h2:$H2_DATA/world -script world.sql
